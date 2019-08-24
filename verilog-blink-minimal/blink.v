@@ -35,6 +35,9 @@ module top (
     assign usb_dp_pu = 1'b0;
 
     // Connect to system clock (with buffering)
+    // NOTE: SB_ prefix stands for SiliconBlue and is a collection of module
+    // primitives to ease the verilog development. For more info visit:
+    // https://www.latticesemi.com/-/media/LatticeSemi/Documents/TechnicalBriefs/iCETechnologyLibrary.ashx?document_id=44572
     wire clkosc;
     SB_GB clk_gb (
         .USER_SIGNAL_TO_GLOBAL_BUFFER(clki),
